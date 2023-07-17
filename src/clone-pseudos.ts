@@ -37,6 +37,7 @@ function clonePseudoElement<T extends HTMLElement>(
   pseudo: Pseudo,
 ) {
   const style = window.getComputedStyle(nativeNode, pseudo)
+  console.log('clonePseudoElement',style)
   const content = style.getPropertyValue('content')
   if (content === '' || content === 'none') {
     return
